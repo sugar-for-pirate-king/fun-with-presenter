@@ -7,10 +7,10 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 require 'faker'
 
-100.times do
+20.times do
   User.create(
     username: Faker::Internet.username,
     fullname: Faker::Name.name,
-    blog: Faker::Internet.url
+    blog: [Faker::Internet.url, nil].sample
   )
 end
